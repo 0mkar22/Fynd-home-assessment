@@ -24,7 +24,7 @@ import google.generativeai as genai
 # GEMINI API CONFIGURATION
 # ============================================================================
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = 'AIzaSyDlYMt6p9fCGVdhXo0MRheWal86wwng7Gc'
 if not GEMINI_API_KEY:
     st.error("❌ GEMINI_API_KEY environment variable not set")
     st.stop()
