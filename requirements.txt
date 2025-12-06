@@ -1,0 +1,8 @@
+streamlit
+google-generativeai
+pandas
+numpy
+python-dateutil
+plotly
+pytz
+jupyter
