@@ -1,0 +1,127 @@
+"""
+SETUP GUIDE: Google Gemini API Version
+=========================================
+
+STEP 1: Get Free Gemini API Key
+=============================
+1. Go to: https://makersuite.google.com/app/apikey
+2. Click "Create API Key"
+3. Copy the API key
+4. Save it safely
+
+STEP 2: Install Dependencies
+=============================
+pip install -r requirements_gemini.txt
+
+STEP 3: Set Environment Variable
+================================
+Linux/Mac:
+    export GEMINI_API_KEY="your-api-key-here"
+
+Windows (Command Prompt):
+    set GEMINI_API_KEY=your-api-key-here
+
+Windows (PowerShell):
+    $env:GEMINI_API_KEY="your-api-key-here"
+
+STEP 4: Run Applications
+=======================
+Task 1 (Jupyter Notebook):
+    jupyter notebook task1_notebook_gemini.ipynb
+
+Task 1 (Python Script):
+    python task1_gemini_version.py
+
+Task 2 (Streamlit App):
+    streamlit run task2_gemini_version.py
+
+STEP 5: Deploy to Streamlit Cloud
+==================================
+1. Push code to GitHub
+2. Go to streamlit.io/cloud
+3. Select your repository
+4. Choose task2_gemini_version.py as main file
+5. In "Secrets" section, add:
+   GEMINI_API_KEY = "your-api-key-here"
+6. Click Deploy
+
+ADVANTAGES OF GEMINI API
+========================
+✓ Free tier with generous quotas (60 requests per minute)
+✓ No credit card required for free tier
+✓ Good for development and testing
+✓ Integrated with Google Cloud ecosystem
+✓ Easy to scale to paid tier if needed
+
+FILE CHANGES FROM CLAUDE VERSION
+=================================
+- Claude: import anthropic
+- Gemini: import google.generativeai as genai
+
+- Claude: client = anthropic.Anthropic()
+- Gemini: genai.configure(api_key=GEMINI_API_KEY)
+          model = genai.GenerativeModel('gemini-pro')
+
+- Claude: response = client.messages.create()
+- Gemini: response = model.generate_content()
+          response_text = response.text
+
+REQUIREMENTS FILE
+================
+streamlit==1.28.0
+google-generativeai==0.3.0
+pandas==2.0.0
+numpy==1.24.0
+python-dateutil==2.8.2
+plotly==5.17.0
+pytz==2023.3
+jupyter==1.0.0
+"""
+
+# Save as requirements_gemini.txt
+requirements_content = """streamlit==1.28.0
+google-generativeai==0.3.0
+pandas==2.0.0
+numpy==1.24.0
+python-dateutil==2.8.2
+plotly==5.17.0
+pytz==2023.3
+jupyter==1.0.0
+"""
+
+print("""
+╔════════════════════════════════════════════════════════════════════════════╗
+║           FYND AI ASSESSMENT - GEMINI API VERSION SETUP                   ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+✅ CONVERTED TO GOOGLE GEMINI API (FREE TIER)
+
+FILES CREATED:
+1. task1_gemini_version.py
+   - Standalone Python script for Task 1
+   - Uses Gemini API for prompt engineering
+   
+2. task2_gemini_version.py
+   - Streamlit web app for Task 2
+   - User & Admin dashboards with Gemini
+   
+3. requirements_gemini.txt
+   - Updated dependencies with google-generativeai
+
+QUICK START:
+============
+1. Get API key: https://makersuite.google.com/app/apikey
+2. export GEMINI_API_KEY="your-key"
+3. pip install -r requirements_gemini.txt
+4. streamlit run task2_gemini_version.py
+
+FEATURES:
+=========
+✓ Free tier (60 requests/minute)
+✓ No credit card needed
+✓ Same functionality as Claude version
+✓ Easier setup and deployment
+✓ Production-ready code
+
+STATUS: ✅ READY FOR USE
+""")
