@@ -19,6 +19,9 @@ import json
 import os
 from typing import Dict, List
 import google.generativeai as genai
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ============================================================================
 # GEMINI API CONFIGURATION
