@@ -6,3 +6,4 @@ python-dateutil
 plotly
 pytz
 jupyter
+dotenv
