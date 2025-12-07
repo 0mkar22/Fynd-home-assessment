@@ -29,9 +29,6 @@ STEP 4: Run Applications
 Task 1 (Jupyter Notebook):
     jupyter notebook task1_notebook_gemini.ipynb
 
-Task 1 (Python Script):
-    python task1_gemini_version.py
-
 Task 2 (Streamlit App):
     streamlit run task2_gemini_version.py
 
